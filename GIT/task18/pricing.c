@@ -1,0 +1,1 @@
+#define DISCOUNT_RATE 15
