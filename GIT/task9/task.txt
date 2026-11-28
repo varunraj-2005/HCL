@@ -1,0 +1,26 @@
+
+C:\Windows\System32>sc.exe config ssh-agent start= auto
+[SC] ChangeServiceConfig SUCCESS
+
+C:\Windows\System32>net start ssh-agent
+
+The OpenSSH Authentication Agent service was started successfully.
+
+
+C:\Windows\System32>ssh-add "%USERPROFILE%\.ssh\id_ed25519"
+Identity added: C:\Users\Admin\.ssh\id_ed25519 (rajapandian1412@gmail.com)
+
+C:\Windows\System32>type "%USERPROFILE%\.ssh\id_ed25519.pub"
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINASWTDxvdTv5sDKB51BNmDlXC7mf/kvSMg5PN//X1g6 rajapandian1412@gmail.com
+
+C:\Windows\System32>ssh -T git@github.com
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi varunraj-2005! You've successfully authenticated, but GitHub does not provide shell access.
+
+C:\Windows\System32>
+
