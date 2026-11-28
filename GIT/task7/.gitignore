@@ -1,0 +1,11 @@
+# Ignore database configuration
+config.env
+
+# Ignore compiler output
+build/
+
+# Ignore all log files
+*.log
+
+# Exception: Track audit log
+!audit.log
